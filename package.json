@@ -6,6 +6,7 @@
   "author": "muqhc",
   "license": "MIT",
   "icon": "icon/icon.png",
+  "publisher": "muqhc",
   "repository": {
     "type": "git",
     "url": "https://github.com/muqhc/vscode-skolloble"
