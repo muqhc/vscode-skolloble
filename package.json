@@ -2,7 +2,7 @@
   "name": "vscode-skolloble",
   "displayName": "Skolloble",
   "description": "Skolloble Language Support",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "muqhc",
   "license": "MIT",
   "icon": "icon/icon.png",
@@ -32,6 +32,41 @@
           ".skble"
         ],
         "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "skolloble",
+        "scopeName": "source.skolloble",
+        "path": "./syntaxes/skolloble.tmLanguage.json"
+      }
+    ],
+    "semanticTokenProviders": [
+        {
+          "language": "skolloble",
+          "documentProvider": true,
+          "rangeProvider": false,
+          "legend": {
+              "tokenTypes": [
+                "string",
+                "tag",
+                "attribute",
+                "namespace",
+                "comment"
+              ]
+          }
+        }
+    ],
+    "semanticTokenTypes": [
+      {
+        "id": "tag",
+        "superType": "enumMember",
+        "description": "A tag of an element."
+      },
+      {
+        "id": "attribute",
+        "superType": "variable",
+        "description": "A attribute of an element."
       }
     ]
   },

@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
-import { skollobleDecoration } from './processDecoration';
+import { SkollobleTokenProvider } from './provider/SkollobleTokenProvider';
 
 export function activate(context: vscode.ExtensionContext) {
-	skollobleDecoration(context);
+	new SkollobleTokenProvider().register(context);
 }
 
 export function deactivate() {}
